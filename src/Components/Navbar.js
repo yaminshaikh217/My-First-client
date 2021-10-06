@@ -17,6 +17,14 @@ const Navbar = () => {
     }
 
 
+    window.addEventListener("load", () => {
+
+
+    })
+
+
+
+
 
 
 
@@ -60,6 +68,11 @@ const Navbar = () => {
                 </div>
             </nav>
 
+            <section className="dummyContent container">
+                <h2>This is Dummy Content</h2>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo distinctio incidunt similique quibusdam quod sit tempora dicta vel, repellendus, dolorum ipsa debitis asperiores sequi rem molestiae quisquam corporis. Quos ipsa, omnis repellendus inventore nulla fuga magnam aliquam reiciendis aut nisi facere repudiandae commodi placeat excepturi neque enim in rerum illum quibusdam quisquam at ad hic error perferendis. Consectetur quibusdam totam nostrum ipsum ea et ratione libero nam facere doloribus delectus repudiandae asperiores architecto rem laudantium eum nisi culpa voluptatum, optio, exercitationem diat debitis, in molestias beatae mollitia. Alias maxime minus, quia tenetur possimus voluptatum, fuga eos tempora mollitia ipsam neque dolores id nostrum omnis dicta sapiente placeat sed debitis consectetur iste totam hic eum! Nam animi cumque, iusto voluptas minus reiciendis recusandae molestias earum sequi tempore quis enim, hic, architecto dolore corporis quam veritatis deleniti? Rerum officiis minus pariatur sequi, dicta esse! Enim!</p>
+            </section>
+
             {/* Hamburger  MENU STARTS************************** */}
 
 
@@ -73,23 +86,23 @@ const Navbar = () => {
                     <h6> <i className="fa fa-home" aria-hidden="true"></i> OVERVIEW</h6>
                     <div>
                         <h6 >
-                            <a href="/" className="dropdown-item" style={{ color: "white" }}> <i class="fa fa-server mx-2" aria-hidden="true"></i>SUBSCRIBED SERVICES</a>
+                            <a href="/" className="dropdown-item" style={{ color: "white" }}> <i className="fa fa-server mx-2" aria-hidden="true"></i>SUBSCRIBED SERVICES</a>
                         </h6>
                         <ul className=" width" >
-                            <li><a className="dropdown-item" href="#">Business Internet</a></li>
-                            <li><a className="dropdown-item" href="#">Business Mobile</a></li>
-                            <li><a className="dropdown-item" href="#">Business Mobility</a></li>
+                            <li><a className="dropdown-item" href="/">Business Internet</a></li>
+                            <li><a className="dropdown-item" href="/">Business Mobile</a></li>
+                            <li><a className="dropdown-item" href="/">Business Mobility</a></li>
                         </ul>
                     </div>
 
                     <div >
                         <h6>
-                            <a href="/" className="dropdown-item" style={{ color: "white" }}><i class="fa fa-clipboard mx-2" aria-hidden="true"></i>ACCOUNT MANAGMENT</a>
+                            <a href="/" className="dropdown-item" style={{ color: "white" }}><i className="fa fa-clipboard mx-2" aria-hidden="true"></i>ACCOUNT MANAGMENT</a>
                         </h6>
                         <ul className=" width" >
-                            <li><a className="dropdown-item" href="#">Business Internet</a></li>
-                            <li><a className="dropdown-item" href="#">Business Mobile</a></li>
-                            <li><a className="dropdown-item" href="#">Business Mobility</a></li>
+                            <li><a className="dropdown-item" href="/">Business Internet</a></li>
+                            <li><a className="dropdown-item" href="/">Business Mobile</a></li>
+                            <li><a className="dropdown-item" href="/">Business Mobility</a></li>
                         </ul>
                     </div>
 
@@ -97,7 +110,7 @@ const Navbar = () => {
             </div>
 
 
-            {/* BOTTOM LEFT MENU ENDS************************** */}
+            {/* Hamburger  MENU ENDS************************** */}
 
 
             {/* // MODAL STARTS HERE ***************************************************** */}
@@ -116,11 +129,19 @@ const Navbar = () => {
                         <div className="modal-body">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat delectus magnam natus? Voluptatum quidem corrupti voluptas, illo molestiae eius necessitatibus vel rem veniam dignissimos explicabo ipsa
                         </div>
-                        <img src={IMG} alt="Image" />
+                        <img src={IMG} alt="img" />
                         <div className="modal-footer">
                             <button type="button" className="btn mybtn" data-bs-dismiss="modal" aria-label="Close">MAY BE LATER</button>
                             <button className="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal" onClick={toggle}>CHECK IT OUT</button>
 
+                        </div>
+                        <div className="Dot-footer">
+                            <ul className="dots">
+                                <li className=" dot activated"></li>
+                                <li className={`dot ${switched ? "activated" : "null"}`}></li>
+                                <li className={`dot ${switched2 ? "activated" : "null"}`}></li>
+                                <li className="dot"></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -129,9 +150,9 @@ const Navbar = () => {
             {/* ********************    2nd MODAL */}
 
 
-            <div className="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                <div className="modal-dialog modal-dialog-centered">
-                    <div className="modal-content">
+            <div className="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
+                <div className={`modal-dialog modal-dialog-centered ${switched ? "left-position" : "null"} `}>
+                    <div className={`modal-content left-border`}>
                         <div className="modal-header">
                             <h5 className="modal-title font-weight-bold" id="exampleModalToggleLabel2">MY ACCOUNT MENU</h5>
 
@@ -143,7 +164,14 @@ const Navbar = () => {
                         <div className="modal-footer">
                             <button className="btn mybtn" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" onClick={toggle}>BACK</button>
                             <button className="btn btn-primary" id="btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" onClick={() => { toggle(); toggle2() }} >NEXT</button>
-
+                        </div>
+                        <div className="Dot-footer">
+                            <ul className="dots">
+                                <li className=" dot activated"></li>
+                                <li className={`dot ${switched ? "activated" : "null"}`}></li>
+                                <li className={`dot ${switched2 ? "activated" : "null"}`}></li>
+                                <li className="dot"></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -156,9 +184,9 @@ const Navbar = () => {
 
 
 
-            <div className="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                <div className="modal-dialog modal-dialog-centered">
-                    <div className="modal-content">
+            <div className="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabIndex="-1">
+                <div className={`modal-dialog modal-dialog-centered ${switched2 ? "right-position" : "null"} `}>
+                    <div className={`modal-content right-border`}>
                         <div className="modal-header">
                             <h5 className="modal-title font-weight-bold" id="exampleModalToggleLabel">User Profile </h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -172,6 +200,14 @@ const Navbar = () => {
                             <button className="btn btn-primary" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" data-bs-dismiss="modal" onClick={toggle2}   >NEXT</button>
 
                         </div>
+                        <div className="Dot-footer">
+                            <ul className="dots">
+                                <li className=" dot activated"></li>
+                                <li className={`dot activated`}></li>
+                                <li className={`dot ${switched2 ? "activated" : "null"}`}></li>
+                                <li className="dot"></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -180,7 +216,7 @@ const Navbar = () => {
             {/* ********************    4th  MODAL */}
 
 
-            <div className="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div className="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabIndex="-1">
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content">
                         <div className="modal-header">
@@ -196,6 +232,14 @@ const Navbar = () => {
                             <button type="button" className="btn btn-outline-secondary">SET UP AUTO PAY</button>
                             <button className="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" >DONE</button>
 
+                        </div>
+                        <div className="Dot-footer">
+                            <ul className="dots">
+                                <li className=" dot activated"></li>
+                                <li className={`dot activated`}></li>
+                                <li className={`dot activated`}></li>
+                                <li className={`dot ${switched2 ? "null" : "activated"}`}></li>
+                            </ul>
                         </div>
                     </div>
                 </div>

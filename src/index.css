@@ -7,7 +7,7 @@
 }
 body {
   min-height: 100vh;
-  background-color: rgb(218, 216, 216);
+  background-color: rgb(17 47 100 / 65%);
 }
 
 li {
@@ -111,12 +111,13 @@ a {
   height: 80vh;
   width: 20vw;
   background: #112f64;
-  bottom: 0;
+  top: 117px;
   left: 0;
   visibility: hidden;
+  visibility: visible;
   box-shadow: 2px 2px 23px #fff;
   border-top: 3px solid #fff;
-  transition: 0.5s;
+  transition: 0.3s;
   z-index: 10000;
 }
 
@@ -151,6 +152,7 @@ a {
 
 .dropDown {
   position: relative;
+  transition: 0.1s;
 }
 .flex {
   position: absolute;
@@ -166,6 +168,7 @@ a {
   padding: 0.5rem;
   box-shadow: 2px 2px 23px #fff;
   z-index: 10000;
+  transition: 0.1s;
 }
 
 .flex li {
@@ -202,4 +205,73 @@ a {
 
 .width li a {
   color: #fff;
+}
+
+/* Dots of Modals******** */
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  border: solid 1px #47748b;
+  margin-right: 3.5px;
+}
+
+.Dot-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Dot-footer ul .dot.activated {
+  background: #47748b;
+}
+
+.dots {
+  padding: 0px;
+}
+
+.dummyContent {
+  color: #fff;
+}
+
+/******8 Positioning  Modals******* */
+
+.left-position {
+  position: absolute;
+  left: 24%;
+  top: -14%;
+}
+
+.right-position {
+  position: absolute;
+  top: -24%;
+  right: 18%;
+}
+
+.left-border::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 39%;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #fff;
+  clear: both;
+}
+
+.right-border::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  right: -4%;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #fff;
+  clear: both;
 }
